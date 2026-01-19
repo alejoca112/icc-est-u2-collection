@@ -61,10 +61,10 @@ public class Sets {
 
     public Set<Person> construirTreeSetConPerson() {
         Set<Person> treeSetPerson = new TreeSet<>((pal1, pal2) -> {
-            //int com = Integer.compare(pal1.getAge(), pal2.getAge()); solo edad
-            //return pal1.getName().compareTo(pal2.getName()); solo nombre 
+            // int com = Integer.compare(pal1.getAge(), pal2.getAge()); solo edad
+            // return pal1.getName().compareTo(pal2.getName()); solo nombre
             int comName = pal2.getName().compareTo(pal1.getName());
-            if(comName != 0){
+            if (comName != 0) {
                 return comName;
             }
             int comAge = Integer.compare(pal2.getAge(), pal1.getAge());
