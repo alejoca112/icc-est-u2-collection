@@ -1,8 +1,8 @@
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeMap;
 
 import controllers.MaquinasController;
 import models.Maquina;
@@ -73,6 +73,8 @@ public class App {
         runEjercicio2();
         System.out.println("\nEjercicio 3");
         runEjercicio3();
+        System.out.println("\nEjercicio 4");
+        runEjercicio4();
     }
 
     private static void runMaquina() {
@@ -145,7 +147,7 @@ public class App {
         EjerciciosMapas ejerciciosMapas = new EjerciciosMapas();
         List<Integer> list = Arrays.asList(4, 5, 1, 2, 5, 4, 3, 2, 1, 6,
                 7, 3, 8, 9, 6, 7, 10);
-        int resultado = ejerciciosMapas.repetido(list);
+        int resultado = ejerciciosMapas.ejercicio2(list);
         System.out.println(resultado);
     }
 
@@ -160,6 +162,20 @@ public class App {
                 new Person("Pedro", 60),
                 new Person("Maria", 75));
         EjerciciosMapas ejerciciosMapas = new EjerciciosMapas();
-        ejerciciosMapas.imprimirRanking(list);
+        ejerciciosMapas.ejercicio3(list);
+    }
+
+    private static void runEjercicio4() {
+        Map<String, Integer> map = new HashMap<>();
+        map.put("Computacion-Ana", 80);
+        map.put("Computacion-Luis", 85);
+        map.put("Electronica-Carlos", 90);
+        map.put("Electronica-Maria", 88);
+        map.put("Computacion-Pedro", 70);
+        map.put("Mecaninca-Juan", 60);
+        map.put("Mecanica-Sofia", 75);
+        EjerciciosMapas ejerciciosMapas = new EjerciciosMapas();
+        Map<String, Integer> resultado = ejerciciosMapas.ejercicio4(map);
+        System.out.println(resultado);
     }
 }

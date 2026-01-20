@@ -24,7 +24,7 @@ public class EjerciciosMapas {
         return conteo;
     }
 
-    public int repetido(List<Integer> list){
+    public int ejercicio2(List<Integer> list){
         Map<Integer, Integer> conteo = new HashMap<>();
         for(Integer num : list){
             conteo.put(num, conteo.getOrDefault(num, 0) + 1);
@@ -37,7 +37,7 @@ public class EjerciciosMapas {
         return -1;
     }
 
-    public void imprimirRanking(List<Person> listado){
+    public void ejercicio3(List<Person> listado){
         Map<String, Integer> rankingMap = new HashMap<>();
         for(Person p: listado){
             String nombre = p.getName();
@@ -60,5 +60,25 @@ public class EjerciciosMapas {
         ranking.addAll(rankingMap.entrySet());
 
         System.out.println(ranking);
+    }
+
+    public Map<String, Integer> ejercicio4(Map<String, Integer> map){
+        Map<String, Integer> max = new HashMap<>();
+        for(Map.Entry<String, Integer> entry : map.entrySet()){
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            
+            //Logica de obtener la carrera con guion
+            String[] parts = key.split("-");
+            String carrera = parts[0];  // Obtiene computacion
+
+
+            //Logica de comparar y reemplazar
+            Integer notaActual = max.getOrDefault(carrera, 0);
+            if(value > notaActual){
+                max.put(carrera, value);
+            }
+        }
+        return max;
     }
 }

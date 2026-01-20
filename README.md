@@ -42,3 +42,12 @@ Inserta aquí la captura del código o de la ejecución.
 
 Insertar la captura de la ejecución del código.
 ![alt text](assets/Ejecucion3.png)
+
+### Ejercicio 4
+Inserta aquí la captura del código o de la ejecución.
+
+- Archivo: ![alt text](assets/Ejercicio4.png)
+
+Insertar la captura de la ejecución del código.
+![alt text](assets/Ejecucion4.png)
+
